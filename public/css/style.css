@@ -1,0 +1,15 @@
+a{
+    font-size: 15px;
+}
+#nav:hover{
+    background-color: rgb(233, 231, 231);
+    width: 100%;
+}
+
+
+h1{
+    line-height: 1.5;
+}
+label{
+    font-weight: bold;
+}
