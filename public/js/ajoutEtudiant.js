@@ -2,6 +2,7 @@
     let selectionDropdown = document.getElementById("selection-dropdown");
     let selectionOptions = selectionDropdown.getElementsByTagName("option");
     selectionOptions[0].disabled = true;
+
         $(document).ready(function(){
             var labelType = '<label> Type de bourse </label> <br>';
             var radioDemi = '<input id="inputs0Generer" class="ml-3" type="radio" value="20000" name="bourse" /> <label> Demi bourse </label> <br>';
@@ -10,6 +11,7 @@
             var inputChambre = '<input id="TextReponse" type="text" class="form-control col-md-5" name="chamre"/>';
             var labeladresse = '<label> Adresse </label> <br>';
             var inputadresse = '<input id="TextReponse" type="text" class="form-control col-md-5" name="adresse"/>';
+            
             $("select#selection-dropdown").change(function(){
                 if(($('#selection-dropdown').val()=="boursier logé")){
                         $('#infos-Plus').html('');

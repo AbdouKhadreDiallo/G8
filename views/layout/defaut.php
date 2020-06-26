@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="col-md-12 text-white text-center bg-secondary mb-0" style="height: 5rem;">
-        <h1 class="h-25">Message de Bienvenue</h1>
+        <h1 class="h-25">G8 MVC & POO project</h1>
     </div>
     <!-- <div class="col-md-12 bg-danger mb-0" style="height: 4rem;"> -->
         <div class="col-md-2 float-left ml-0 deleteMarge bg-secondary no-gutters" style="height: 44rem;">

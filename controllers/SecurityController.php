@@ -1,4 +1,5 @@
 <?php
+
 class SecurityController extends Controller{
 
    public  function __construct(){
@@ -20,10 +21,25 @@ class SecurityController extends Controller{
         $this->view="addChambre";
         $this->render();
     }
-    public function listechambre(){
+
+
+    public function supprimer(){
         $this->view="listechambre";
+        $this->dao = new ChambreDao();
+
+        $chambre = $this->dao->deleteChambre();
         $this->render();
     }
+
+    public function listechambre(){
+        $this->view="listechambre";
+        $this->dao = new ChambreDao();
+
+        $chambre = $this->dao->getChambre();
+        $this->render();
+    }
+
+
     public function addTudent(){
         if (isset($_POST['enregistrer'])) {
             extract($_POST);
