@@ -142,8 +142,12 @@ class ChambreDao extends Manager {
     public function getChambre(){
         return $this -> findAll();
     }
-    public function add($obj){
-
+    public function add($chambre){
+        $numero = $chambre -> getNumeroChambre();
+        $typeChambre = $chambre -> getTypeChambre();
+        $numeroBatiment = $chambre -> numeroBatiment();
+        $sql = "INSERT INTO chambre (numeroChambre,typeChambre,numeroBatiment) VALUES ('$numero','$typeChambre','$numeroBatiment')";
+        $data = $this -> executeUpdate($sql);
     }
     public function update($column_name,$text, $id){
         $sql = "UPDATE $this->tableName SET $column_name = '$text' WHERE numeroChambre = '$id'";

@@ -8,11 +8,11 @@
     $crudcontroller = new ChambreDao();
     $result = $crudcontroller->update($column_name,$text,$id);
     if ($result) {
-        print_r(json_encode("updated"));
+        print_r(json_encode("champs modifié"));
     }
-    else {
-        print_r(json_encode("nop"));
-    }
+    // else {
+    //     print_r(json_encode("nop"));
+    // }
     
 
 ?>

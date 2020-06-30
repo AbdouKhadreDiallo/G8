@@ -4,7 +4,7 @@
         private $adresse;
 
         public __construct($row = null){
-            $this->profil="non boursier";
+            $this->profil="Non boursier";
             if($row!=null){
                 $this->hydrate($row);
             }
@@ -14,9 +14,9 @@
             $this->prenom=$row['prenom'];
             $this->nom=$row['nom'];  
             $this->email=$row['email']; 
-            $this->telephone=$row['telephone'];
+            $this->tel=$row['tel'];
             $this->birthday=$row['birthday']; 
-            $this->profil=$row['profil'];
+            $this->typeEtudiant=$row['typeEtudiant'];
             $this->adresse=$row['adresse'];
         }
 
@@ -28,7 +28,7 @@
         public function setAdresse($adresse){
             $this->adresse=$adresse;
         }
-        public function setProfil($profil){
+        public function settypeEtudiant($typeEtudiant){
         
         }
      

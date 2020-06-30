@@ -4,9 +4,9 @@
         protected $nom;
         protected $prenom;
         protected $email;
-        protected $telephone;
+        protected $tel;
         protected $birthday;
-        protected $profil;
+        protected $typeEtudiant;
 
         public   function __construct($row=null){
             if($row!=null){
@@ -16,13 +16,14 @@
         }
 
         public  function hydrate($row){
-            $this->matricule=$row['id']; 
+            $this->matricule=$row['matricule']; 
             $this->prenom=$row['prenom'];
             $this->nom=$row['nom'];  
             $this->email=$row['email']; 
-            $this->telephone=$row['telephone'];
+            $this->tel=$row['tel'];
             $this->birthday=$row['birthday']; 
-            $this->profil=$row['profil']; 
+            $this->typeEtudiant=$row['typeEtudiant'];
+            
          }
 
         // getters
@@ -32,17 +33,20 @@
         public function getNom(){
             return $this -> nom;
         }
+        public function getEmail(){
+            return $this -> email;
+        }
         public function getPrenom(){
             return $this -> prenom;
         }
-        public function getTelephone(){
-            return $this -> telephone;
+        public function getTel(){
+            return $this -> tel;
         }
         public function getBirthday(){
             return $this -> birthday;
         }
-        public function getProfil(){
-            return $this -> profil;
+        public function gettypeEtudiant(){
+            return $this -> typeEtudiant;
         }
 
         // setters
@@ -55,14 +59,14 @@
         public function setPrenom($prenom){
             $this -> prenom = $prenom;
         }
-        public function setTelephone($telephone){
-            $this -> telephone = $telephone;
+        public function setTelephone($tel){
+            $this -> tel = $tel;
         }
         public function setBirthday($birthday){
             $this -> birthday = $birthday;
         }
-        public function setProfil($profil){
-            $this -> profil = $profil;
+        public function settypeEtudiant($typeEtudiant){
+            $this -> typeEtudiant = $typeEtudiant;
         }
 
     }

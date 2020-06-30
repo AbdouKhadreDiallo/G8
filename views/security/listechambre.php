@@ -15,6 +15,7 @@
 </div>
 
 <script>
+  const URL_ROOT = "http://localhost/projet%20POO/G8/";
     $(document).ready(function(){
     loadData();
     function loadData() {
@@ -29,7 +30,7 @@
    
 
     $(document).on('click' , '.bn-delete' ,function(){
-		if(confirm("Are you sure want to delete the record?")) {
+		if(confirm("Voulez-vous supprimer cette Chambre?")) {
             var id = this.id;
             alert(id);
 			$.ajax({
@@ -50,20 +51,22 @@
             data : {id: id, text:text, column_name: column_name},
             success: function(data){
                 alert(data);
+                console.log(data);
             }
         });
     }
-    $(document).on('blur', '.numeroBatiment', function(){   
+    $(document).on('blur', '.numeroBatiment', function(){ 
+      // alert('ok');  
         var id = $(this).data("id1");  
-        var prenom = $(this).text();  
-        edit_data(id,nom, "numeroBatiment");  
+        var numeroBatiment = $(this).text();  
+        edit_data(id,numeroBatiment, "numeroBatiment");  
         loadData(); 
    });
    $(document).on('blur', '.typeChambre', function(){
     
     var id = $(this).data("id2");  
-    var nom = $(this).text();
-    edit_data(id, prenom, "typeChambre");   
+    var typeChambre = $(this).text();
+    edit_data(id, typeChambre, "typeChambre");   
      
     loadData();
 });
