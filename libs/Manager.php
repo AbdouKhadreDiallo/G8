@@ -66,6 +66,10 @@ public function delete($id){
     $sql="delete from `$this->tableName` where numeroChambre='$id'";
     return $this->executeUpdate($sql)!=0;
 }
+public function deleteStdd($id){
+  $sql="delete from `$this->tableName` where matricule='$id'";
+    return $this->executeUpdate($sql)!=0;
+}
 public function preparer($sql){
   $this->getConnexion();
   return $this->pdo->prepare($sql);
